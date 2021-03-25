@@ -88,7 +88,7 @@ class Explorer extends Component {
                     )
                 }
                 {
-                    (error.length === 0) && (images.length === 0) && (
+                    !loading && (error.length === 0) && (images.length === 0) && (
                         <div>
                             <h1>No data available for the preview</h1>
                         </div>

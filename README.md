@@ -3,6 +3,8 @@
 <h1>Prerequisites</h1>
   1. Node (version v12.16.2 or higher)
   
+  2. https://github.com/akash707/template_viewer_backend (Template Viewer Backend Project) 
+  
 <h1>Steps to setup the project</h1>
 
 Step 1:  Clone the project from this repository

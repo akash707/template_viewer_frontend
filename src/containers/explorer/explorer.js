@@ -66,7 +66,7 @@ class Explorer extends Component {
                 {loading && <img className="loader" src={loader} alt="Loader" />}
                 {
                     !loading && (error.length > 0 ? (<Error errors={error} />) :
-                        (<div id="container">
+                        ((images && images.length > 0) && <div id="container">
                             <div id="main" role="main">
                                 <div id="large">
                                     <div className="group">
@@ -87,6 +87,13 @@ class Explorer extends Component {
                         </div>)
                     )
                 }
+                {
+                    (error.length === 0) && (images.length === 0) && (
+                        <div>
+                            <h1>No data available for the preview</h1>
+                        </div>
+                    )
+                }
             </React.Fragment>
         )
     }
@@ -94,7 +101,6 @@ class Explorer extends Component {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
         loading: state.loading,
         error: state.error,
